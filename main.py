@@ -1,12 +1,14 @@
-actualTemp = 75
-desiredTemp = 70
+def heating_cooling(actualTemp, desiredTemp):
+    if actualTemp > desiredTemp:
+        return "Run A/C"
+    elif actualTemp < desiredTemp:
+        return "Run heat"
+    else:
+        return "Standby"
 
-if actualTemp > desiredTemp:
-    print("Run A/C")
-elif actualTemp < desiredTemp:
-    print("Run heat")
-else:
-    print("Standby")
+actualTemp = input('What is the actual temp? ')
+desiredTemp = input('What is the desired temp? ')
+print(heating_cooling(actualTemp,desiredTemp))
 
 
 tempStr = input('Enter the temperature in Celsius: ')
