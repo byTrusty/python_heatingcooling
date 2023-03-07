@@ -12,18 +12,18 @@ print(heating_cooling(actualTemp,desiredTemp))
 
 
 def celsius_conversion(tempCelsius, targetUnit):
-    if targetUnit == "C":
-        convertedTemp = tempCelsius
-    elif targetUnit == "F":
-        convertedTemp = (tempCelsius * 9/5) + 32
-    elif targetUnit == "K":
-        convertedTemp = tempCelsius + 273.15
+    # Check the target unit and convert the temperature accordingly
+    if targetUnit == 'C':
+        converted_temp = tempCelsius
+    elif targetUnit == 'F':
+        converted_temp = (tempCelsius * 9/5) + 32
+    elif targetUnit == 'K':
+        converted_temp = tempCelsius + 273.15
     else:
-        print("Invalid target unit. Please choose 'C', 'F', or 'K'.")
-        convertedTemp = None
-    if convertedTemp is not None:
-        print(f"The temperature is {convertedTemp} {targetUnit}.")
-        print(f"You entered {tempCelsius} Celsius.")
+        return 'Invalid target unit. Please choose (C/F/K).'
+
+    return f'{converted_temp:.1f} {targetUnit}'
+
 
 
 
